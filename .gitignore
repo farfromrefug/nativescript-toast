@@ -33,9 +33,9 @@ node_modules
 .idea/
 
 # generated files and folders
-samples/angular/app/*.js*
-samples/angular/app/tests/*.js*
-samples/angular/hooks/
-samples/angular/lib/
-samples/angular/node_modules/
-samples/angular/platforms/
+demo-angular/app/*.js*
+demo-angular/app/tests/*.js*
+demo-angular/hooks/
+demo-angular/lib/
+demo-angular/node_modules/
+demo-angular/platforms/
