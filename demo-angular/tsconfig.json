@@ -1,29 +1,15 @@
 {
     "compilerOptions": {
-        "target": "es5",
         "module": "commonjs",
-        "declaration": true,
-        "pretty": true,
-        "removeComments": true,
+        "target": "es5",
         "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
         "noEmitHelpers": true,
         "noEmitOnError": true,
-        "skipDefaultLibCheck": true,
-        "skipLibCheck": true,
-        "noLib": false,
-        "importHelpers": false,
-        "noImplicitAny": false,
-        "noImplicitReturns": true,
-        "noImplicitUseStrict": false,
-        "noFallthroughCasesInSwitch": true,
         "lib": [
+            "es6",
             "dom",
-            "es5",
-            "es2015",
             "es2015.iterable"
-        ],
-        "types": [
-            "jasmine"
         ],
         "baseUrl": ".",
         "paths": {
@@ -33,10 +19,9 @@
             ]
         }
     },
-    "compileOnSave": true,
     "exclude": [
         "node_modules",
-        "test",
-        "platforms"
+        "platforms",
+        "**/*.aot.ts"
     ]
 }

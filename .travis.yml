@@ -5,19 +5,14 @@ language: objective-c
 
 env:
   global:
+    - NATIVESCRIPT_CLI_VERSION='4.1'
     - API=19 # Google API 19 by default
     - TAG=google_apis # Google APIs by default, alternatively use default
     - ABI=armeabi-v7a # ARM ABI v7a by default
   matrix:
-    - NODE_VERSION="6" NPM_VERSION="3" TNS_VERSION="2.5.5"
-    - NODE_VERSION="7" NPM_VERSION="3" TNS_VERSION="2.5.5"
-    - NODE_VERSION="7" NPM_VERSION="4" TNS_VERSION="2.5.5"
-    - NODE_VERSION="6" NPM_VERSION="3" TNS_VERSION="3.0.3"
-    - NODE_VERSION="6" NPM_VERSION="3" TNS_VERSION="3.0.3"
-    - NODE_VERSION="7" NPM_VERSION="4" TNS_VERSION="3.0.3"
-    - NODE_VERSION="6" NPM_VERSION="3" TNS_VERSION="3"
-    - NODE_VERSION="6" NPM_VERSION="3" TNS_VERSION="3"
-    - NODE_VERSION="7" NPM_VERSION="4" TNS_VERSION="3"
+    - NODE_VERSION="6" NPM_VERSION="3"
+    - NODE_VERSION="8" NPM_VERSION="5"
+    - NODE_VERSION="8" NPM_VERSION="6"
 
 before_install:
   - export EMULATOR="system-images;android-${API};${TAG};${ABI}" # Used to install/create emulator
@@ -62,7 +57,7 @@ before_install:
   - pod repo update --silent
   # Build Tools
   - npm install -g npm@$NPM_VERSION
-  - npm install -g nativescript@$TNS_VERSION
+  - npm install -g nativescript@$NATIVESCRIPT_CLI_VERSION
   - tns usage-reporting disable
   - tns error-reporting disable
   # Show environment info

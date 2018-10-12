@@ -8,7 +8,7 @@
     "clean": "git checkout demo-angular/package.json && rm -rf node_modules target tmp && mkdir -p tmp && mkdir -p tmp/angular && cd demo-angular && rm -rf node_modules hooks platforms",
     "postclean": "npm install",
     "test": "cd tmp/angular && cp -rp ../../demo-angular/* . && rm -rf platforms node_modules hooks && tns plugin add ../.. && tns install && tns build ios && tns build android",
-    "pree2e": "cd demo-angular && npm install && tns build ios && tns build android",
+    "build": "cd demo-angular && npm install && npm run build",
     "e2e": "cd demo-angular && tns test ios --emulator --justlaunch",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "changelog:add": "git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",

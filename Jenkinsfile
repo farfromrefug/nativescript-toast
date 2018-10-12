@@ -28,6 +28,7 @@ timeout(60) {
 
         stage('Build') {
             nodeJS.nvmRun('clean')
+            nodeJS.nvmRun('build')
         }
 
         stage('Test') {
