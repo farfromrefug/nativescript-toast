@@ -28,7 +28,6 @@ timeout(60) {
 
         stage('Build') {
             nodeJS.nvmRun('clean')
-            nodeJS.nvm('install')
         }
 
         stage('Test') {
@@ -37,7 +36,6 @@ timeout(60) {
         }
 
         stage('E2E') {
-            nodeJS.nvmRun('pre-e2e')
             nodeJS.nvmRun('e2e')
             junit 'tmp/TEST-*.xml'
         }
